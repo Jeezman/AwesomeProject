@@ -14,30 +14,15 @@ import {
   View,
   Text,
   StatusBar,
-  Button,
 } from 'react-native';
 
 import {
   Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import RNMonnify from 'mnfyrnsdk';
+import Test from 'mnfy-test-sdk'
 
 class App extends React.Component {
-  componentDidMount() {
-
-    console.log("RNMonnify", { RNMonnify })
-
-    // RNMonnify.init({
-    //   apiKey: 'MK_TEST_VR7J3UAACH',
-    //   contractCode: '4876165459',
-    //   applicationMode: 'TEST',
-    // });
-    // alert('hello')
-  }
   render() {
     return (
       <>
@@ -52,24 +37,8 @@ class App extends React.Component {
                 <Text style={styles.footer}>Engine: Hermes</Text>
               </View>
             )}
-            {/* <Button onPress={() => {
 
-              console.log("RNMonnifyModule.initializePayment was called")
-
-              RNMonnify.initializePayment({
-                amount: 1200.50,
-                customerName: 'Tobi Adeyemi',
-                customerEmail: 'tobiadeyemi@gmail.com',
-                paymentReference: this.makeid(10),
-                paymentDescription: 'Foodies',
-                currencyCode: 'NGN',
-                incomeSplitConfig: []
-              }).then(res => {
-                alert(res)
-              })
-            }
-
-            } title="Run SDK" /> */}
+            <Test />
 
           </ScrollView>
         </SafeAreaView>
